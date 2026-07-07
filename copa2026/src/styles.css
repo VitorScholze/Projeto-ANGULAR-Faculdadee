@@ -1,0 +1,511 @@
+/* You can add global styles to this file, and also import other style files */
+/* Reset geral */
+* {
+  margin: 0;
+  padding: 0;
+
+  /* Medidas */
+  /* box-sizing controla como largura e altura são calculadas */
+  box-sizing: border-box;
+}
+
+body {
+
+  /* Fonte principal */
+  font-family: 'Roboto', sans-serif;
+
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+
+
+header {
+  background-color: #1a3c5e;
+
+  /* Medidas fixas em px */
+  padding: 16px 24px;
+}
+
+
+/* FLEXBOX */
+nav {
+
+  /* Flexbox usado no menu */
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  /* Responsividade */
+  /* quebra linha em telas menores */
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.logo {
+  color: #f5c518;
+
+  /* Medidas relativas */
+  /* rem se adapta ao tamanho da fonte do navegador */
+  font-size: 1.4rem;
+
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+
+  /* FLEXBOX */
+  display: flex;
+
+  gap: 20px;
+
+  /* Responsividade */
+  flex-wrap: wrap;
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+
+  /* Medidas relativas */
+  font-size: 0.95rem;
+}
+
+nav ul a:hover {
+  color: #f5c518;
+}
+
+
+/* Acessibilidade */
+a:focus {
+  outline: 2px solid #f5c518;
+  outline-offset: 3px;
+}
+
+
+
+.hero {
+  background-color: #1a3c5e;
+  color: white;
+  text-align: center;
+
+  /* Medidas fixas */
+  padding: 60px 20px;
+}
+
+.hero img {
+
+  /* Responsividade */
+  /* largura relativa */
+  width: 85%;
+
+  /* Limite máximo */
+  max-width: 450px;
+
+  border-radius: 8px;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.hero h1 {
+
+  /* Medidas relativas */
+  font-size: 2.2rem;
+
+  margin-bottom: 10px;
+}
+
+.hero p {
+
+  /* Medidas relativas */
+  font-size: 1rem;
+
+  color: #ccc;
+
+  /* Responsividade */
+  max-width: 500px;
+
+  margin: 0 auto;
+}
+
+.back-home {
+  background-color: #f5c518;
+  color: #1a3c5e;
+
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  filter: brightness(0.95);
+}
+
+
+section {
+
+  /* Medidas fixas */
+  padding: 40px 20px;
+
+  /* Responsividade */
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+h2 {
+
+  /* Medidas relativas */
+  font-size: 1.5rem;
+
+  color: #1a3c5e;
+  margin-bottom: 20px;
+}
+
+
+
+/* FLEXBOX */
+.numeros {
+
+  /* Flexbox usado nos cards */
+  display: flex;
+
+  /* Responsividade */
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+.numero-card {
+  background-color: #1a3c5e;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+
+  /* FLEXBOX */
+  /* card cresce e se adapta */
+  flex: 1 1 140px;
+
+  text-align: center;
+
+  /* ANIMAÇÕES */
+  transition: transform 0.3s;
+}
+
+.numero-card:hover {
+
+  /* ANIMAÇÕES */
+  transform: translateY(-5px);
+}
+
+.numero-card strong {
+  display: block;
+
+  /* Medidas relativas */
+  font-size: 2rem;
+
+  color: #f5c518;
+}
+
+.numero-card span {
+
+  /* Medidas relativas */
+  font-size: 0.85rem;
+
+  color: #ccc;
+}
+
+
+
+#sedes {
+  background-color: #fff;
+
+  /* Responsividade */
+  max-width: 100%;
+
+  padding: 40px 20px;
+}
+
+#sedes .inner {
+
+  /* Responsividade */
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+
+/* GRID */
+.sedes-grid {
+
+  /* Grid usado nas sedes */
+  display: grid;
+
+  /* Mobile First */
+  /* começa com 1 coluna no celular */
+  grid-template-columns: 1fr;
+
+  gap: 16px;
+}
+
+.sede-card {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+
+  /* ANIMAÇÕES */
+  transition: box-shadow 0.3s;
+}
+
+.sede-card:hover {
+
+  /* ANIMAÇÕES */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.sede-card h3 {
+  color: #1a3c5e;
+  margin-bottom: 6px;
+}
+
+.sede-card p {
+
+  /* Medidas relativas */
+  font-size: 0.9rem;
+
+  color: #555;
+  line-height: 1.5;
+}
+
+.sede-pais {
+
+  /* Medidas relativas */
+  font-size: 2rem;
+
+  margin-bottom: 8px;
+}
+
+
+
+/* GRID */
+.grupos-grid {
+
+  display: grid;
+
+  /* Mobile First */
+  grid-template-columns: 1fr;
+
+  gap: 16px;
+}
+
+.grupo-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.grupo-titulo {
+  background-color: #1a3c5e;
+  color: #f5c518;
+  padding: 8px 14px;
+  font-weight: 700;
+
+  /* Medidas relativas */
+  font-size: 0.95rem;
+}
+
+.grupo-card ul {
+  list-style: none;
+}
+
+.grupo-card ul li {
+
+  /* FLEXBOX */
+  display: flex;
+
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+  border-bottom: 1px solid #eee;
+
+  /* Medidas relativas */
+  font-size: 0.9rem;
+}
+
+.grupo-card ul li:last-child {
+  border-bottom: none;
+}
+
+
+
+/* FLEXBOX */
+.calendario-lista {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.evento {
+  background-color: #fff;
+  border-left: 4px solid #f5c518;
+  border-radius: 4px;
+  padding: 14px 18px;
+
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+
+  /* ANIMAÇÕES */
+  animation: aparecer 0.5s ease both;
+}
+
+/* ANIMAÇÕES */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.evento strong {
+  display: block;
+  color: #1a3c5e;
+  margin-bottom: 4px;
+}
+
+.evento p {
+
+  /* Medidas relativas */
+  font-size: 0.9rem;
+
+  color: #555;
+}
+
+/* ANIMAÇÕES */
+h2 {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+h2:hover {
+  color: #f5c518;
+
+  /* ANIMAÇÕES */
+  transform: translateY(-2px);
+}
+
+
+/* ANIMAÇÕES */
+.numero-card,
+.sede-card,
+.grupo-card {
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.numero-card:hover,
+.sede-card:hover,
+.grupo-card:hover {
+
+  /* ANIMAÇÕES */
+  transform: translateY(-6px);
+
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+/* Link voltar para o início com efeito */
+.back-home {
+
+  /* ANIMAÇÕES */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.back-home:hover {
+
+  /* ANIMAÇÕES */
+  transform: translateY(-2px);
+
+  filter: brightness(1.05);
+}
+
+/* Animação de entrada quando carregar */
+.hero,
+.inicio-destaques,
+.evento,
+.numero-card,
+.sede-card,
+.grupo-card {
+
+  /* ANIMAÇÕES */
+  animation: fadeUp 0.6s ease both;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aqui tem um erro no seletor */
+background-color {
+  color: #ccc;
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+
+footer span {
+  color: #f5c518;
+}
+
+
+/* RESPONSIVIDADE */
+/* MOBILE FIRST */
+/* Primeiro celular, depois telas maiores */
+
+@media (min-width: 600px) {
+
+  /* GRID responsivo */
+  .sedes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grupos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* RESPONSIVIDADE */
+@media (min-width: 900px) {
+
+  /* GRID responsivo */
+  .sedes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grupos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
